@@ -1,0 +1,46 @@
+1.1 Agent Assistant Robot (Sequence)													
+	Private = False												
+	Activities												
+		1.2 Monitor Agent Action (MonitorEvents)											
+			RepeatForever = True										
+			Private = False										
+			Handler										
+				1.3 Sequence (Sequence)									
+					Private = False								
+					Activities								
+						1.4 Sequence (Sequence)							
+							Private = False						
+							Activities						
+								1.5 Event Handler (Sequence)					
+									Private = False				
+									Variables				
+										EditableText(UiElement)			
+									Activities				
+										1.11 Comment (Comment)			
+											Text = A common process improvement consists in automating re-keying data. 		
+											Private = False		
+										1.9 Input Dialog (InputDialog)			
+											Title = Que quieres hacer?		
+											IsPassword = False		
+											Private = False		
+										1.6 Open Browser (OpenBrowser)			
+											Url = https://www.scotiabank.com.mx/		
+											Private = False		
+											NewSession = True		
+											Hidden = False		
+											BrowserType = IE		
+											Private = False		
+											Body		
+												1.7 Do (Sequence)	
+													Private = False
+			Triggers										
+				1.12 Click Image Trigger 'ApplicationFrameHost.ex...' (ClickImageTrigger)									
+					Image								
+						Accuracy = 0.8							
+						Profile = Basic							
+					MouseButton = BTN_LEFT								
+					Selector = <wnd app='applicationframehost.exe' appid='Microsoft.Windows.Photos_8wekyb3d8bbwe!App' title='Photos' />								
+					EventType = EVENT_ASYNCHRONOUS								
+					BlockEvent = False								
+					KeyModifiers = None								
+					Private = False								
